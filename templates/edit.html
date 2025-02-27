@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Изменение таблицы{% endblock %}
+
+{% block content %}
+<h1 id="table-header"></h1>
+
+<table id="edit-table">
+    <thead>
+        <tr></tr>
+    </thead>
+    <tbody></tbody>
+</table>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        const appConfig = {
+            tableName: "{{ table_name }}"
+        };
+    </script>
+    <script src="{{ url_for('static', filename='edit.js') }}"></script>
+{% endblock %}
